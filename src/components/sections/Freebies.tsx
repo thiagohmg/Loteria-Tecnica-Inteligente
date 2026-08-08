@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, Gift, FileSpreadsheet, Grid3X3, CheckCircle2, Sparkles } from "lucide-react";
+import { Download, Gift, FileSpreadsheet, Grid3X3, Sparkles } from "lucide-react";
 import { content } from "@/data/content";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { Button } from "@/components/ui/Button";
@@ -82,18 +82,7 @@ export function Freebies() {
                   {g.description}
                 </p>
 
-                <ul className="space-y-2.5 relative border-t border-white/10 pt-5">
-                  {[
-                    "Acesso imediato após o clique",
-                    "Formato .xlsx, compatível com Excel e Google Sheets",
-                    "Atualizada com os últimos concursos",
-                  ].map((t, k) => (
-                    <li key={k} className="flex items-start gap-3 text-white/75 text-sm sm:text-base">
-                      <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" strokeWidth={2} />
-                      <span>{t}</span>
-                    </li>
-                  ))}
-                </ul>
+
               </motion.div>
             );
           })}
