@@ -11,6 +11,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: LucideIcon;
   iconRight?: boolean;
   href?: string;
+  target?: string;
+  rel?: string;
   children: ReactNode;
   fullWidthOnMobile?: boolean;
 }
@@ -38,6 +40,8 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       icon: Icon = ArrowRight,
       iconRight = true,
       href,
+      target,
+      rel,
       children,
       fullWidthOnMobile = true,
       ...props
@@ -53,8 +57,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     );
 
     if (href) {
+      const linkProps: Record<string, string | undefined> = {
+        href,
+        className: classes,
+      };
+      if (target) linkProps.target = target;
+      if (rel) linkProps.rel = rel;
       return (
-        <a href={href} className={classes}>
+        <a {...linkProps}>
           {!iconRight && Icon ? <Icon className="w-5 h-5 -ml-1 transition-transform group-hover:-translate-x-0.5" /> : null}
           <span>{children}</span>
           {iconRight && Icon ? <Icon className="w-5 h-5 -mr-1 transition-transform group-hover:translate-x-0.5" /> : null}

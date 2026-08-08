@@ -116,7 +116,9 @@ export function Freebies() {
               <Button
                 size="xl"
                 icon={Download}
-                href="#"
+                href={f.downloadUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="whitespace-normal sm:whitespace-nowrap"
               >
                 {f.cta}

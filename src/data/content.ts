@@ -95,6 +95,7 @@ export const content = {
       "Acertar na Lotofácil jogando de qualquer jeito é quase impossível. Pensando nisso preparamos para você algumas planilhas que vão te auxiliar em seus jogos.",
     clickHelper: "Clique no botão abaixo para baixar as planilhas!",
     cta: "CLIQUE AQUI PARA BAIXAR",
+    downloadUrl: "https://drive.google.com/drive/folders/1q2jq1LH9m6dwsMUhn3wJlGh8ztr33AxI",
     gifts: [
       {
         number: "01",
