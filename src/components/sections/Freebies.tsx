@@ -42,7 +42,7 @@ export function Freebies() {
         </motion.div>
 
         {/* Gift cards */}
-        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto mb-14">
+        <div className="grid grid-cols-1 gap-6 lg:gap-8 max-w-2xl mx-auto mb-14 justify-items-center">
           {f.gifts
             .filter((g: any) => g.number !== "01")
             .map((g: any, i: number) => {
@@ -55,11 +55,7 @@ export function Freebies() {
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ delay: i * 0.12, duration: 0.7, ease: "easeOut" }}
                   whileHover={{ y: -6 }}
-                  className={`glass-card glass-card-hover rounded-[28px] p-7 sm:p-8 lg:p-9 border-gold-500/15 transition-all duration-300 relative overflow-hidden group ${
-                    f.gifts.filter((x: any) => x.number !== "01").length === 1
-                      ? "md:max-w-2xl md:mx-auto"
-                      : ""
-                  }`}
+                  className="w-full glass-card glass-card-hover rounded-[28px] p-7 sm:p-8 lg:p-9 border-gold-500/15 transition-all duration-300 relative overflow-hidden group"
                 >
                   <div className="absolute -top-16 -right-16 w-52 h-52 rounded-full blob bg-gold-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
