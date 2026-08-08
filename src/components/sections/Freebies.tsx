@@ -42,50 +42,55 @@ export function Freebies() {
         </motion.div>
 
         {/* Gift cards */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto mb-14">
-          {f.gifts.map((g, i) => {
-            const Icon = iconMap[g.icon] ?? FileSpreadsheet;
-            return (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.2 }}
-                transition={{ delay: i * 0.12, duration: 0.7, ease: "easeOut" }}
-                whileHover={{ y: -6 }}
-                className="glass-card glass-card-hover rounded-[28px] p-7 sm:p-8 lg:p-9 border-gold-500/15 transition-all duration-300 relative overflow-hidden group"
-              >
-                <div className="absolute -top-16 -right-16 w-52 h-52 rounded-full blob bg-gold-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 max-w-4xl mx-auto mb-14">
+          {f.gifts
+            .filter((g: any) => g.number !== "01")
+            .map((g: any, i: number) => {
+              const Icon = iconMap[g.icon] ?? FileSpreadsheet;
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ delay: i * 0.12, duration: 0.7, ease: "easeOut" }}
+                  whileHover={{ y: -6 }}
+                  className={`glass-card glass-card-hover rounded-[28px] p-7 sm:p-8 lg:p-9 border-gold-500/15 transition-all duration-300 relative overflow-hidden group ${
+                    f.gifts.filter((x: any) => x.number !== "01").length === 1
+                      ? "md:max-w-2xl md:mx-auto"
+                      : ""
+                  }`}
+                >
+                  <div className="absolute -top-16 -right-16 w-52 h-52 rounded-full blob bg-gold-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="relative flex items-start gap-5 mb-6">
-                  <div className="relative flex-shrink-0">
-                    <div className="absolute -inset-1.5 rounded-2xl bg-gold-gradient opacity-20 blur-md group-hover:opacity-35 transition" />
-                    <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-navy-700 to-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:text-navy-950 group-hover:bg-gold-gradient group-hover:shadow-gold-glow transition-all duration-300">
-                      <Icon className="w-8 h-8 sm:w-9 sm:h-9" strokeWidth={1.7} />
+                  <div className="relative flex items-start gap-5 mb-6">
+                    <div className="relative flex-shrink-0">
+                      <div className="absolute -inset-1.5 rounded-2xl bg-gold-gradient opacity-20 blur-md group-hover:opacity-35 transition" />
+                      <div className="relative w-16 h-16 sm:w-18 sm:h-18 rounded-2xl bg-gradient-to-br from-navy-700 to-navy-900 border border-gold-500/30 flex items-center justify-center text-gold-400 group-hover:text-navy-950 group-hover:bg-gold-gradient group-hover:shadow-gold-glow transition-all duration-300">
+                        <Icon className="w-8 h-8 sm:w-9 sm:h-9" strokeWidth={1.7} />
+                      </div>
+                      <div className="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 text-navy-950 font-extrabold text-xs flex items-center justify-center shadow-gold-glow font-display">
+                        {g.number}
+                      </div>
                     </div>
-                    <div className="absolute -top-3 -right-3 w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-gold-600 text-navy-950 font-extrabold text-xs flex items-center justify-center shadow-gold-glow font-display">
-                      {g.number}
+                    <div className="flex-1 pt-1">
+                      <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
+                        {g.title}
+                      </h3>
+                      <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest">
+                        <Sparkles className="w-3 h-3" />
+                        100% Gratuito
+                      </div>
                     </div>
                   </div>
-                  <div className="flex-1 pt-1">
-                    <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-2">
-                      {g.title}
-                    </h3>
-                    <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-widest">
-                      <Sparkles className="w-3 h-3" />
-                      100% Gratuito
-                    </div>
-                  </div>
-                </div>
 
-                <p className="text-white/75 leading-relaxed text-base sm:text-lg mb-7 relative">
-                  {g.description}
-                </p>
+                  <p className="text-white/75 leading-relaxed text-base sm:text-lg mb-7 relative">
+                    {g.description}
+                  </p>
 
-
-              </motion.div>
-            );
-          })}
+                </motion.div>
+              );
+            })}
         </div>
 
         {/* CTA grande download */}
