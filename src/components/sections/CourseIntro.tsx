@@ -127,7 +127,7 @@ export function CourseIntro() {
                 <div className="w-11 h-11 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-2xl bg-gold-gradient-soft border border-gold-500/25 flex items-center justify-center text-gold-400 mb-3 sm:mb-4 group-hover:bg-gold-gradient group-hover:text-navy-950 group-hover:shadow-gold-glow transition-all duration-300 flex-shrink-0">
                   <Icon className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7" strokeWidth={1.8} />
                 </div>
-                <h3 className="font-display font-bold text-white mb-2 sm:mb-3 whitespace-nowrap overflow-hidden text-ellipsis text-sm sm:text-base md:text-lg xl:text-xl 2xl:text-[1.35rem]">
+                <h3 className="font-display font-bold text-white mb-2 sm:mb-3 whitespace-normal sm:whitespace-nowrap overflow-hidden text-ellipsis text-sm sm:text-base md:text-lg xl:text-xl 2xl:text-[1.35rem] min-w-0">
                   {b.title}
                 </h3>
                 <p
@@ -165,7 +165,7 @@ export function CourseIntro() {
                 <Sparkles className="w-3.5 h-3.5" />
                 O que você vai aprender
               </div>
-              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.05] whitespace-nowrap">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.05] whitespace-normal sm:whitespace-nowrap">
                 <span className="text-white">Domine os </span>
                 <span className="text-gradient-gold">padrões da Lotofácil</span>
               </h2>

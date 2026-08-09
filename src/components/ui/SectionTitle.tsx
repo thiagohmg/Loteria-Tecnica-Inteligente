@@ -41,7 +41,7 @@ export function SectionTitle({
         </div>
       ) : null}
 
-      <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-white mb-5">
+      <h2 className="font-display text-3xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] text-white mb-5 whitespace-normal break-words">
         {title.split(" ").map((word, i) =>
           i === title.split(" ").length - 1 ? (
             <span key={i} className="text-gradient-gold">

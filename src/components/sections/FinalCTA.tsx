@@ -50,7 +50,7 @@ export function FinalCTA() {
             </div>
 
             {/* Big title */}
-            <h2 className="font-display font-black text-center text-4xl sm:text-6xl lg:text-7xl leading-[1.05] mb-6 tracking-tight">
+            <h2 className="font-display font-black text-center text-3xl sm:text-6xl lg:text-7xl leading-[1.05] mb-6 tracking-tight whitespace-normal break-words">
               <span className="block text-white">{f.title.split(",")[0]},</span>
               <span className="block text-gradient-gold mt-2">
                 {f.title.split(",")[1]?.trim().replace("!", "")}!

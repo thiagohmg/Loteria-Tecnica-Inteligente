@@ -28,8 +28,17 @@ h1, h2, h3, h4 {
   p, li {
     text-align: justify;
     text-justify: inter-word;
-    -webkit-hyphens: auto;
-    hyphens: auto;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+  /* Ajuste para mobile: sem justificação para evitar grandes espaços entre palavras */
+  @media (max-width: 640px) {
+    p, li {
+      text-align: left;
+    }
   }
   /* =============== EXCEÇÕES — TUDO ISSO NUNCA JUSTIFICA NEM HIFENIZA =============== */
   /* Header / Navegação / Menus / Botões / Links curtos */
@@ -56,6 +65,8 @@ h1, h2, h3, h4 {
     text-justify: initial;
     -webkit-hyphens: manual;
     hyphens: manual;
+    overflow-wrap: initial;
+    word-break: initial;
   }
 }
 

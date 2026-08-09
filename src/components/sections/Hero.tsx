@@ -30,15 +30,15 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-gold-500/40 text-gold-400 text-xs sm:text-sm font-bold uppercase tracking-[0.18em] mb-7"
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full glass-card border-gold-500/40 text-gold-400 text-[10px] sm:text-sm font-bold uppercase tracking-[0.1em] sm:tracking-[0.18em] mb-6 sm:mb-7 text-center"
             >
-              <Sparkles className="w-4 h-4 text-gold-500" />
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-gold-500" />
               {h.eyebrow}
             </motion.div>
 
-            {/* Title — UMA LINHA SÓ */}
-            <h1 className="font-display font-extrabold whitespace-nowrap leading-[0.98] tracking-tight mb-8 text-center
-                           text-4xl sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-6xl 2xl:text-7xl">
+            {/* Title — UMA LINHA SÓ no desktop, quebra no mobile */}
+            <h1 className="font-display font-extrabold whitespace-normal sm:whitespace-nowrap leading-[0.98] tracking-tight mb-8 text-center
+                           text-3xl sm:text-5xl md:text-6xl lg:text-[4.25rem] xl:text-6xl 2xl:text-7xl">
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
