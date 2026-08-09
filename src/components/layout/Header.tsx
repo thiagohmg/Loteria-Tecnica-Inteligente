@@ -68,7 +68,7 @@ export function Header() {
               <MessageCircle className="w-4 h-4" />
               Dúvidas?
             </a>
-            <a href="#comprar" className="btn-primary !py-2.5 xl:!py-3 !px-6 xl:!px-7 text-sm xl:text-[15px] whitespace-nowrap">
+            <a href={content.site.checkoutUrl} target="_blank" rel="noopener noreferrer" className="btn-primary !py-2.5 xl:!py-3 !px-6 xl:!px-7 text-sm xl:text-[15px] whitespace-nowrap">
               <span className="relative z-10 flex items-center gap-2">
                 Quero o curso
                 <ArrowRight className="w-4 h-4 xl:w-[18px] xl:h-[18px]" />
@@ -117,7 +117,9 @@ export function Header() {
                     Dúvidas
                   </a>
                   <a
-                    href="#comprar"
+                    href={content.site.checkoutUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={() => setOpen(false)}
                     className="btn-primary !py-3 !px-4 text-sm justify-center whitespace-nowrap"
                   >

@@ -106,7 +106,9 @@ export function FinalCTA() {
                 <Button
                   size="xl"
                   icon={ArrowRight}
-                  href="#"
+                  href={content.site.checkoutUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="!px-10 !py-5 !text-lg sm:!text-xl relative"
                 >
                   {f.cta}
