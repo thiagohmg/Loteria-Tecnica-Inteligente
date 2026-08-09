@@ -4,7 +4,7 @@ export const content = {
     email: "loteriatecnicainteligente@gmail.com",
     ctaCompra: "Sim, quero adquirir o curso! Clique aqui",
     whatsappLabel: "Dúvidas? Pergunte aqui!",
-    checkoutUrl: "https://pay.kiwify.com.br/P0m6VIm",
+    checkoutUrl: "https://pay.kiwify.com.br/ZtvT2kz",
   },
 
   hero: {
