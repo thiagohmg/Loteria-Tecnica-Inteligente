@@ -57,9 +57,9 @@ export function AboutAuthor() {
                 {/* Avatar do Rômulo */}
                 <div className="relative w-full aspect-[4/5] rounded-[24px] overflow-hidden mb-7 border border-gold-500/20">
                   <img
-                    src="/Sr%20Romulo.png"
+                    src="/Romulo%20Youtube.png"
                     alt="Rômulo Dias de Oliveira, especialista em Lotofácil"
-                    className="w-full h-full object-cover object-[50%_15%] block"
+                    className="w-full h-full object-cover object-[50%_20%] block"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-navy-950/50 via-transparent to-transparent pointer-events-none" />
