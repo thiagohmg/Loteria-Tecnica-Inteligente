@@ -61,6 +61,66 @@ export function FinalCTA() {
               {f.subtitle}
             </p>
 
+            {/* PRICE BLOCK — o coração da oferta */}
+            <div className="relative mb-12">
+              <div className="relative max-w-2xl mx-auto rounded-[32px] overflow-hidden border border-gold-500/30">
+                <div className="absolute inset-0 bg-gradient-to-br from-gold-500/15 via-gold-500/5 to-transparent" />
+                <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[460px] h-[300px] rounded-full blob bg-gold-500/20 blur-2xl" />
+
+                <div className="relative p-6 sm:p-10 lg:p-12 flex flex-col items-center">
+                  <div className="flex flex-wrap justify-center items-center gap-3 mb-6">
+                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-gradient text-navy-950 text-xs sm:text-sm font-black uppercase tracking-[0.16em]">
+                      <Sparkles className="w-4 h-4" />
+                      Oferta por tempo limitado
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-5 sm:gap-8">
+                    <div className="flex flex-col items-center sm:items-start">
+                      <span className="text-xs sm:text-sm text-white/50 uppercase tracking-widest font-bold mb-1">
+                        De
+                      </span>
+                      <span className="text-2xl sm:text-3xl font-black text-white/35 line-through">
+                        R$ {f.price.from}
+                      </span>
+                    </div>
+
+                    <div className="flex flex-col items-center">
+                      <span className="text-xs sm:text-sm text-gold-400 uppercase tracking-widest font-black mb-2">
+                        Por apenas
+                      </span>
+                      <div className="flex items-baseline gap-1.5 sm:gap-2">
+                        <span className="text-lg sm:text-2xl font-black text-gold-400 -mr-1 sm:-mr-2">
+                          R$
+                        </span>
+                        <span className="text-6xl sm:text-7xl lg:text-8xl font-black font-display text-gradient-gold leading-none tracking-tight">
+                          {f.price.por.split(",")[0]}
+                        </span>
+                        <span className="text-3xl sm:text-4xl lg:text-5xl font-black font-display text-gradient-gold -ml-1 sm:-ml-2">
+                          ,{f.price.por.split(",")[1]}
+                        </span>
+                      </div>
+                      <span className="text-sm sm:text-base font-bold text-gold-400 mt-2 uppercase tracking-wider">
+                        {f.price.cash}
+                      </span>
+                    </div>
+
+                    <div className="flex flex-col items-center sm:items-end">
+                      <span className="text-xs sm:text-sm text-white/50 uppercase tracking-widest font-bold mb-1">
+                        Ou no cartão
+                      </span>
+                      <span className="text-xl sm:text-2xl font-black text-white/90">
+                        {f.price.installments}
+                      </span>
+                      <span className="text-xs sm:text-sm text-emerald-400 font-bold mt-1 uppercase tracking-wider">
+                        ≅ {f.price.perDay}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Guarantees strip */}
             <div className="grid sm:grid-cols-3 gap-4 mb-12 max-w-3xl mx-auto">
               {[

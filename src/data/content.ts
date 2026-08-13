@@ -160,6 +160,13 @@ export const content = {
     cta: "Sim, quero adquirir o curso! Clique aqui",
     parcelas: "Compre em 10x no cartão",
     garantia: "Garantia de resultados ou seu dinheiro de volta.",
+    price: {
+      from: "297,00",
+      por: "107,00",
+      cash: "à vista",
+      installments: "10x de R$ 10,70",
+      perDay: "Menos de R$ 1 por dia",
+    },
   },
 };
 
